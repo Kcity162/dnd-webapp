@@ -35,7 +35,6 @@ const PlayersPage = () => {
   };
   return (
     <div style={pageStyle}>
-      <h1>Players Content</h1>
       {playersData.map((player, index) => (
         <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>

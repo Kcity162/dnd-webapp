@@ -46,7 +46,6 @@ const StoryPage = () => {
 
   return (
     <div style={pageStyle}>
-      <h1>Story Content</h1>
       <Autocomplete
         options={storyData.map(chapter => chapter.title)}
         value={storyData[selectedChapter].title}

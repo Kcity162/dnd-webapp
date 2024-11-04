@@ -33,7 +33,6 @@ const RollTablesPage = () => {
   };
   return (
     <div style={pageStyle}>
-      <h1>Roll Tables Content</h1>
       {rollTablesData.map((table, index) => (
         <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>

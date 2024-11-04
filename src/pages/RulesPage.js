@@ -33,7 +33,6 @@ const RulesPage = () => {
   };
   return (
     <div style={pageStyle}>
-      <h1>Rules Content</h1>
       {rulesData.map((rule, index) => (
         <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>

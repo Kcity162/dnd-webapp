@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import BottomNavigationBar from './components/BottomNavigationBar';
 import StoryPage from './pages/StoryPage';
@@ -10,11 +10,6 @@ import AppBar from '@mui/material/AppBar';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(() => {
@@ -60,19 +55,6 @@ function App() {
       case 0:
         return (
           <div>
-<Autocomplete
-  options={['Chapter 1', 'Chapter 2', 'Chapter 3']}
-  value={tabValue === 0 ? 'Chapter 1' : tabValue === 1 ? 'Chapter 2' : 'Chapter 3'}
-  onChange={(event, newValue) => {
-    if (newValue === 'Chapter 1') setTabValue(0);
-    if (newValue === 'Chapter 2') setTabValue(1);
-    if (newValue === 'Chapter 3') setTabValue(2);
-    localStorage.setItem('tabValue', JSON.stringify(newValue === 'Chapter 1' ? 0 : newValue === 'Chapter 2' ? 1 : 2));
-  }}
-  renderInput={(params) => <TextField {...params} placeholder="Select Chapter" variant="outlined" />}
-  sx={{ width: '100%', marginBottom: '16px' }}
-/>
-
             {tabValue === 0 && <StoryPage chapter={1} />}
             {tabValue === 1 && <StoryPage chapter={2} />}
             {tabValue === 2 && <StoryPage chapter={3} />}
