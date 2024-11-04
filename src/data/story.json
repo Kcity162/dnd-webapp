@@ -1,14 +1,25 @@
-  [
+[
     {
       "title": "Chapter 1",
-      "content": "Detailed information about Chapter 1 goes here."
+      "subSections": [
+        {
+          "title": "Introduction",
+          "content": "Details of the introduction go here."
+        },
+        {
+          "title": "Main Story",
+          "content": "Details of the main story go here."
+        }
+      ]
     },
     {
       "title": "Chapter 2",
-      "content": "Detailed information about Chapter 2 goes here."
-    },
-    {
-      "title": "Chapter 3",
-      "content": "Detailed information about Chapter 3 goes here."
+      "subSections": [
+        {
+          "title": "Conflict",
+          "content": "Details of the conflict go here."
+        }
+      ]
     }
   ]
+  

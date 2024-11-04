@@ -8,15 +8,17 @@ import rulesData from '../data/rules.json';
 
 const RulesPage = () => {
   const pageStyle = {
-    backgroundImage: "url('/images/parchment-background.jpg')", // Replace with actual path to your image
+  
+    backgroundImage: "url('/images/parchment-background.png')", // Replace with your image path
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     minHeight: '100vh',
     padding: '16px',
-    margin: '0',
     width: '100%',
     boxSizing: 'border-box'
-  };
+
+  
+};  
   const [expanded, setExpandedRules] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-rules');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;

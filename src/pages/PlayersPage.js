@@ -6,18 +6,22 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Margin } from '@mui/icons-material';
 import playersData from '../data/players.json';
 
 const PlayersPage = () => {
-
   const pageStyle = {
-    backgroundColor: '#f0f0f1', 
-    minHeight: '100vh'
   
-  };  
+    backgroundImage: "url('/images/parchment-background.png')", // Replace with your image path
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+    padding: '16px',
+    width: '100%',
+    boxSizing: 'border-box'
 
-  const [expanded, setExpanded] = useState(() => {
+  
+};  
+  const [expanded, setExpandedPlayers] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-players');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
   });
@@ -27,31 +31,21 @@ const PlayersPage = () => {
   }, [expanded]);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
+    setExpandedPlayers(isExpanded ? panel : false);
   };
   return (
     <div style={pageStyle}>
-      <h1>Players Content Goes Here</h1>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-          <Typography>Player 1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Detailed information about Player 1 goes here.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-          <Typography>Player 2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Detailed information about Player 2 goes here.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      <h1>Players Content</h1>
+      {playersData.map((player, index) => (
+        <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
+            <Typography color='primary'>{player.name}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{player.details}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
     </div>
   );
 };
