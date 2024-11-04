@@ -6,8 +6,16 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Margin } from '@mui/icons-material';
 
 const PlayersPage = () => {
+
+  const pageStyle = {
+    backgroundColor: '#f0f0f1', 
+    minHeight: '100vh'
+  
+  };  
+
   const [expanded, setExpanded] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-players');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
@@ -21,7 +29,7 @@ const PlayersPage = () => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <div>
+    <div style={pageStyle}>
       <h1>Players Content Goes Here</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">

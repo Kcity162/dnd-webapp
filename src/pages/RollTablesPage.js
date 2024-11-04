@@ -8,6 +8,21 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const RollTables = () => {
+  
+  const pageStyle = {
+  
+      backgroundImage: "url('/images/parchment-background.png')", // Replace with your image path
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      minHeight: '100vh',
+      padding: '16px',
+      width: '100%',
+      boxSizing: 'border-box'
+    
+    
+  };  
+
+  
   const [expanded, setRollTables] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-rolltables');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
@@ -22,7 +37,7 @@ const RollTables = () => {
   };
   return (
     
-    <div>
+    <div style={pageStyle}>
     
       <h1>Roll Tables Content</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>

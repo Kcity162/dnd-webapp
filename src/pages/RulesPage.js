@@ -8,6 +8,21 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const RulesPage = () => {
+  
+  const pageStyle = {
+  
+    backgroundImage: "url('/images/parchment-background.png')", // Replace with your image path
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+    padding: '16px',
+    width: '100%',
+    boxSizing: 'border-box'
+  
+  
+};  
+
+  
   const [expanded, setExpandedRules] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-rules');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
@@ -21,7 +36,7 @@ const RulesPage = () => {
     setExpandedRules(isExpanded ? panel : false);
   };
   return (
-    <div>
+    <div style={pageStyle}>
       <h1>Rules Content Goes Here</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
