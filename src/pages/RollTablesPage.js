@@ -18,11 +18,13 @@ const RollTables = () => {
   }, [expanded]);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpandedPlayers(isExpanded ? panel : false);
+    setRollTables(isExpanded ? panel : false);
   };
   return (
+    
     <div>
-      <h1>Players Content Goes Here</h1>
+    
+      <h1>Roll Tables Content</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
           <Typography>Player 1</Typography>
@@ -47,4 +49,4 @@ const RollTables = () => {
   );
 };
 
-export default PlayersPage;
+export default RollTables;
