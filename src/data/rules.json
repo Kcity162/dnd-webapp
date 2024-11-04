@@ -1,0 +1,42 @@
+[
+    {
+      "title": "Ability Checks",
+      "content": "An ability check tests a character's or monster's innate talent and training in an effort to overcome a challenge."
+    },
+    {
+      "title": "Saving Throws",
+      "content": "A saving throw—also called a save—represents an attempt to resist a spell, a trap, a poison, a disease, or a similar threat."
+    },
+    {
+      "title": "Attack Rolls",
+      "content": "When you make an attack roll, you roll a d20 and add the appropriate modifiers."
+    },
+    {
+      "title": "Armor Class (AC)",
+      "content": "Armor Class represents how well your character avoids being wounded in battle."
+    },
+    {
+      "title": "Movement and Positioning",
+      "content": "Movement is measured in feet. During combat, you can move up to your speed as part of your action."
+    },
+    {
+      "title": "Spellcasting",
+      "content": "Spellcasting is the ability to cast spells. Each class has unique rules on how spells are learned and cast."
+    },
+    {
+      "title": "Conditions",
+      "content": "Conditions alter a creature's capabilities in a variety of ways and are described in detail in the game rules. Examples include blinded, charmed, and poisoned."
+    },
+    {
+      "title": "Combat Round",
+      "content": "A combat round consists of turns, with each participant taking a turn in order, usually determined by initiative."
+    },
+    {
+      "title": "Resting",
+      "content": "Resting is crucial to allow characters to regain abilities. Short rests take at least an hour, while long rests are 8 hours."
+    },
+    {
+      "title": "Death Saving Throws",
+      "content": "When a character drops to 0 hit points, they must make death saving throws to avoid dying."
+    }
+  ]

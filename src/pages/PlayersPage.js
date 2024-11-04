@@ -7,6 +7,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Margin } from '@mui/icons-material';
+import playersData from '../data/players.json';
 
 const PlayersPage = () => {
 
