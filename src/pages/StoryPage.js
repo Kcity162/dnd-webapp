@@ -35,10 +35,10 @@ const StoryPage = ({ chapter }) => {
 
   return (
     <div style={pageStyle}>
-      <h1>Story Content for Chapter {chapter} Goes Here</h1>
+      <h1>Chapter {chapter}</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-          <Typography>Introduction</Typography>
+          <Typography color="primary">Introduction</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -48,7 +48,7 @@ const StoryPage = ({ chapter }) => {
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2a-content" id="panel2a-header">
-          <Typography>Main Plot</Typography>
+          <Typography color="primary">Main Plot</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

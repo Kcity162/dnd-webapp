@@ -37,7 +37,7 @@ const RulesPage = () => {
   };
   return (
     <div style={pageStyle}>
-      <h1>Rules Content Goes Here</h1>
+      <h1 color="primary">Rules Content Goes Here</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
           <Typography>General Rules</Typography>
