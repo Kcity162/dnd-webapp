@@ -5,20 +5,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import rollTablesData from '../data/rollTables.json';
+import PageWrapper from '../components/PageWrapper';
 
 const RollTablesPage = () => {
-  const pageStyle = {
-  
-    backgroundImage: "url('/images/parchment-background.png')", // Replace with your image path
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    padding: '16px',
-    width: '100%',
-    boxSizing: 'border-box'
 
-  
-};  
   const [expanded, setExpandedRollTables] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-rolltables');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
@@ -32,7 +22,7 @@ const RollTablesPage = () => {
     setExpandedRollTables(isExpanded ? panel : false);
   };
   return (
-    <div style={pageStyle}>
+    <PageWrapper>
       {rollTablesData.map((table, index) => (
         <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
@@ -43,7 +33,7 @@ const RollTablesPage = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-    </div>
+    </PageWrapper>
   );
 };
 

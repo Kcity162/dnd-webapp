@@ -7,20 +7,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import playersData from '../data/players.json';
+import PageWrapper from '../components/PageWrapper';
 
 const PlayersPage = () => {
-  const pageStyle = {
-  
-    backgroundImage: "url('/images/parchment-background.png')", // Replace with your image path
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    padding: '16px',
-    width: '100%',
-    boxSizing: 'border-box'
 
-  
-};  
   const [expanded, setExpandedPlayers] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-players');
     return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
@@ -34,7 +24,7 @@ const PlayersPage = () => {
     setExpandedPlayers(isExpanded ? panel : false);
   };
   return (
-    <div style={pageStyle}>
+    <PageWrapper>
       {playersData.map((player, index) => (
         <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainer.default',  }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
@@ -45,7 +35,7 @@ const PlayersPage = () => {
           </AccordionDetails>
         </Accordion>
       ))}
-    </div>
+    </PageWrapper>
   );
 };
 
