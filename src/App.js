@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState } from 'react';
 import './App.css';
+import TopNavigationBar from './components/TopNavigationBar';
 import BottomNavigationBar from './components/BottomNavigationBar';
 import StoryPage from './pages/StoryPage';
 import RulesPage from './pages/RulesPage';
@@ -10,6 +11,7 @@ import AppBar from '@mui/material/AppBar';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Toolbar from '@mui/material/Toolbar';
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(() => {
@@ -85,19 +87,8 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar position="static">
-        <Toolbar>
-
-          <Autocomplete
-            options={['Chapter 1', 'Chapter 2', 'Chapter 3', 'Rules', 'Roll Tables', 'Players', 'General Rules', 'Combat Rules', 'Treasure Tables', 'Encounter Tables', 'Player 1', 'Player 2']}
-            value={searchValue}
-            onChange={handleSearchChange}
-            renderInput={(params) => <TextField {...params} variant="outlined" />}
-            sx={{ width: '100%', marginTop: '8px', marginBottom: '8px', backgroundColor: 'white' }}
-          />
-        </Toolbar>
-      </AppBar>
-      <main style={{ padding: '8px', paddingBottom: '80px' }}>
+      <TopNavigationBar></TopNavigationBar>
+      <main style={{ paddingBottom: '80px', paddingTop:'60px' }}>
         {renderContent()}
       </main>
       <BottomNavigationBar onChange={setSelectedPage} />
