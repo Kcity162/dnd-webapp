@@ -22,10 +22,12 @@ const StoryPage = () => {
     boxSizing: 'border-box'
 
   
-};  
+}; 
+
+
   const [expanded, setExpandedStory] = useState(() => {
     const savedExpanded = localStorage.getItem('expanded-story');
-    return savedExpanded !== null ? JSON.parse(savedExpanded) : false;
+    return savedExpanded !== null ? JSON.parse(savedExpanded) : {};
   });
   const [selectedChapter, setSelectedChapter] = useState(0);
 
@@ -34,13 +36,17 @@ const StoryPage = () => {
   }, [expanded]);
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpandedStory(isExpanded ? panel : false);
+    setExpandedStory((prevExpanded) => ({
+      ...prevExpanded,
+      [panel]: isExpanded,
+    }));
   };
 
   const handleChapterChange = (event, newValue) => {
     const chapterIndex = storyData.findIndex(chapter => chapter.title === newValue);
     if (chapterIndex !== -1) {
       setSelectedChapter(chapterIndex);
+      setExpandedStory({}); // Collapse all accordions when changing chapters
     }
   };
 
@@ -48,22 +54,32 @@ const StoryPage = () => {
     <div style={pageStyle}>
       <Autocomplete
         options={storyData.map(chapter => chapter.title)}
-        value={storyData[selectedChapter].title}
+        value={storyData[selectedChapter]?.title || ''}
         onChange={handleChapterChange}
         renderInput={(params) => <TextField {...params} label="Select Chapter" variant="outlined" />}
         sx={{ width: '100%', marginBottom: '16px', backgroundColor: 'white' }}
       />
-      {storyData[selectedChapter].subSections.map((subSection, index) => (
-        <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls={`panel${index}a-content`}
-            id={`panel${index}a-header`}
-          >
-            <Typography color='primary'>{subSection.title}</Typography>
+      {storyData[selectedChapter]?.subSections.map((subSection, index) => (
+        <Accordion key={index} expanded={!!expanded[`panel${index}`]} onChange={handleChange(`panel${index}`)}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainer.default' }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
+            <Typography>{subSection.title}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>{subSection.content}</Typography>
+            {subSection.content && subSection.content.split('\n').map((line, i) => (
+              <Typography key={i}>{line}</Typography>
+            ))}
+            {subSection.subSections && subSection.subSections.map((nestedSection, nestedIndex) => (
+              <Accordion key={`${index}-${nestedIndex}`} expanded={!!expanded[`panel${index}-${nestedIndex}`]} onChange={handleChange(`panel${index}-${nestedIndex}`)}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainerLow.default' }} aria-controls={`panel${index}-${nestedIndex}a-content`} id={`panel${index}-${nestedIndex}a-header`}>
+                  <Typography>{nestedSection.title}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  {nestedSection.content && nestedSection.content.split('\n').map((line, i) => (
+                    <Typography key={i}>{line}</Typography>
+                  ))}
+                </AccordionDetails>
+              </Accordion>
+            ))}
           </AccordionDetails>
         </Accordion>
       ))}

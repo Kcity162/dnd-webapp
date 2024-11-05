@@ -1,25 +1,267 @@
 [
-    {
-      "title": "Chapter 1",
-      "subSections": [
-        {
-          "title": "Introduction",
-          "content": "Details of the introduction go here."
-        },
-        {
-          "title": "Main Story",
-          "content": "Details of the main story go here."
-        }
-      ]
-    },
-    {
-      "title": "Chapter 2",
-      "subSections": [
-        {
-          "title": "Conflict",
-          "content": "Details of the conflict go here."
-        }
-      ]
-    }
-  ]
-  
+  {
+    "title": "Chapter 1: Into the Mists",
+    "subSections": [
+      {
+        "title": "Introduction",
+        "content": "- Eerie mists surround Barovia, trapping its inhabitants.\n- This chapter prepares you for the adventurers' journey into the mists.\n- Outlines Strahd's history and goals.\n- 'Fortunes of Ravenloft' walks you through the tarokka card reading.\n- Adventure hooks help draw characters into the horror of Barovia."
+      },
+      {
+        "title": "Strahd von Zarovich",
+        "content": "- Strahd von Zarovich is a vampire and wizard.\n- His statistics are in Appendix D.\n- He can be encountered almost anywhere in his domain.\n- Strahd appears in a specific place indicated by the card reading, unless forced into his tomb."
+      },
+      {
+        "title": "The Vampire’s History",
+        "subSections": [
+          {
+            "title": "Early Life",
+            "content": "- Strahd was a count, prince, soldier, and conqueror.\n- After King Barov's death, Strahd waged bloody wars against his enemies.\n- He named the valley 'Barovia' after his father.\n- Strahd settled there due to the valley's beauty."
+          },
+          {
+            "title": "Relationship with Queen Ravenovia and Sergei",
+            "content": "- Queen Ravenovia feared Strahd after Barov's death.\n- She kept Sergei away from battle.\n- Strahd envied the love given to Sergei.\n- Peace made Strahd restless.\n- Strahd forged a pact with the Dark Powers for immortality."
+          },
+          {
+            "title": "Castle Ravenloft",
+            "content": "- Strahd brought wizards and artisans to Barovia.\n- Built Castle Ravenloft to rival ancestral fortresses.\n- Named it after his mother, Ravenovia.\n- Ravenovia died on her way to Barovia; her body was sealed in a crypt beneath the castle."
+          },
+          {
+            "title": "Tatyana and Sergei",
+            "content": "- Strahd loved Tatyana, a beautiful Barovian woman.\n- Tatyana fell in love with Sergei.\n- On their wedding day, Strahd killed Sergei and drank his blood.\n- Tatyana jumped to her death to escape Strahd.\n- Castle guards shot Strahd, but he survived."
+          },
+          {
+            "title": "Transformation into a Vampire",
+            "content": "- The Dark Powers honored Strahd's pact.\n- Strahd became a vampire, slaughtered the guards.\n- Faces of his parents appeared in thunderclouds, judging him.\n- The valley and castle were locked in a demiplane with deadly fog."
+          },
+          {
+            "title": "Life as a Vampire",
+            "content": "- Strahd has ruled Ravenloft for centuries.\n- He took several consorts, all turned into vampire spawn.\n- Strangers are sometimes brought to his domain for his amusement.\n- Strahd enjoys their resistance as a diversion."
+          },
+          {
+            "title": "Strahd’s Belief in Escape",
+            "content": "- Strahd believes escape lies in finding a worthy successor.\n- His arrogance prevents anyone from being good enough.\n- Only a great von Zarovich could sway the Dark Powers.\n\n'I am the Ancient. I am the Land.'\n\n'My beginnings are lost in darkness. I am undead, forever.'\n\n—Tome of Strahd"
+          }
+        ]
+      },
+      {
+        "title": "Strahd’s Goals",
+        "subSections": [
+          {
+            "title": "Turn Ireena Kolyana",
+            "content": "- Strahd believes Ireena is Tatyana reincarnated.\n- He wants to claim Ireena as his consort.\n- Strahd visited Ireena twice and drank her blood.\n- He plans to kill Ireena and turn her into his vampire spawn."
+          },
+          {
+            "title": "Find Rudolph van Richten",
+            "content": "- Strahd is aware of vampire hunter Rudolph van Richten.\n- He has spies searching for van Richten.\n- Strahd wants to imprison van Richten and break his spirit."
+          },
+          {
+            "title": "Search for a Successor or Consort",
+            "content": "- Strahd senses new blood and assesses newcomers.\n- He looks for a successor or consort among them.\n- Charismatic and arrogant adventurers draw his attention.\n- Strahd tests their fortitude, focusing attacks on them.\n- If none prove worthy, they serve as his amusement."
+          }
+        ]
+      },
+      {
+        "title": "Roleplaying Strahd",
+        "subSections": [
+          {
+            "title": "Strahd’s Emotional State",
+            "content": "- Strahd feels no pity, remorse, love, or hate.\n- He believes he is the master of his own fate.\n- Barely any emotion remains in him.\n- Tatyana's death haunts him, but he has no regret."
+          },
+          {
+            "title": "Strahd’s Nature as a Conqueror",
+            "content": "- In undeath, Strahd conquers people, not realms.\n- He corrupts good souls and destroys those who resist.\n- Characters who appeal to his humanity will fail.\n- Strahd claims Tatyana's soul belongs to him."
+          },
+          {
+            "title": "Strahd’s Manipulative Behavior",
+            "content": "- Strahd can be seductive and subtle.\n- Attractive or clever individuals amuse him for a time.\n- He exploits weaknesses and tries to create divisions.\n- He may promise to turn someone into a full vampire.\n- Ultimately, Strahd betrays and controls them as vampire spawn."
+          }
+        ]
+      },
+      {
+        "title": "When Strahd Attacks",
+        "subSections": [
+          {
+            "title": "Strahd’s Movement in Barovia",
+            "content": "- Strahd moves freely in his realm and castle.\n- The more he encounters characters, the better.\n- Multiple encounters before the final showdown are likely.\n- Combat details are in Appendix D."
+          },
+          {
+            "title": "Strahd’s Encounters with the Characters",
+            "content": "- Strahd visits to terrorize characters, day or night.\n- He tries to charm or goad them into inviting him inside.\n- Strahd never attacks Ireena.\n- Encounters are meant to test, not kill, the characters.\n- Strahd and his minions withdraw after a few rounds."
+          }
+        ]
+      },
+      {
+        "title": "Fortunes of Ravenloft",
+        "subSections": [
+          {
+            "title": "Tarokka Card Reading",
+            "content": "- Events are based on twists of fate discerned by tarokka cards.\n- Draw cards to determine: \n  - Strahd’s location in Castle Ravenloft\n  - Locations of three important treasures\n  - The identity of a powerful ally\n- Each card reading can change the adventure."
+          },
+          {
+            "title": "Madam Eva’s Reading",
+            "content": "- Characters may meet Madam Eva for a card reading.\n- Ezmerelda d’Avenir can also perform a card reading.\n- Ezmerelda’s deck is hidden in her wagon (Chapter 11, Area V1)."
+          },
+          {
+            "title": "Appendix E: Tarokka Deck",
+            "content": "- Appendix E summarizes all cards of the tarokka deck.\n- It includes their symbolic meanings."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Chapter 2: The Lands of Barovia",
+    "subSections": [
+      {
+        "title": "Introduction",
+        "content": "- Barovia was once an idyllic valley nestled in the Balinok Mountains.\n- Strahd led a bloody crusade, conquering Barovia and claiming it as his home.\n- The valley is now a demiplane formed by Strahd's consciousness, surrounded by deadly fog."
+      },
+      {
+        "title": "Strahd’s Rule and the Fog",
+        "content": "- Barovia is no longer part of the Material Plane.\n- No creature can leave without Strahd's permission.\n- The fog disorients and traps those attempting to leave."
+      },
+      {
+        "title": "Strahd and the Vistani",
+        "content": "- Strahd allows the Vistani to come and go freely.\n- He respects their lifestyle and owes them for saving his life.\n- The Vistani claim to possess potions to exit the fog, but these are false concoctions."
+      },
+      {
+        "title": "Life Under Strahd",
+        "content": "- Native Barovians have been terrorized by Strahd for centuries.\n- They live in three main settlements: the villages of Barovia and Krezk, and the town of Vallaki.\n- The Keepers of the Feather, a secret society of wereravens, assist those who oppose Strahd."
+      },
+      {
+        "title": "Lay of the Land",
+        "subSections": [
+          {
+            "title": "Natural Features",
+            "content": "- Thunderclouds cast a gray pall over Barovia.\n- The valley is enclosed by Mount Baratok and Mount Ghakis.\n- Lake Zarovich lies between the mountains, with Vallaki at its southern shore."
+          },
+          {
+            "title": "Settlements",
+            "content": "- Vallaki: A town enclosed by a palisade, known for its festivals.\n- Krezk: A walled village around the Abbey of Saint Markovia.\n- Village of Barovia: Lies east of the mountains, watched over by Castle Ravenloft."
+          },
+          {
+            "title": "Castle Ravenloft",
+            "content": "- Castle Ravenloft stands on a high column of rock known as the Pillarstone of Ravenloft.\n- It looms over the village of Barovia."
+          }
+        ]
+      },
+      {
+        "title": "Mists of Ravenloft",
+        "content": "- Deadly fog surrounds Barovia, preventing escape.\n- Creatures in the fog must succeed on a DC 20 Constitution saving throw or gain exhaustion.\n- The fog turns travelers around, eventually returning them to Barovia."
+      },
+      {
+        "title": "Sunlight in Barovia",
+        "content": "- The sun never fully shines in Barovia.\n- Even daylight is muted and not considered sunlight for certain effects.\n- Strahd and his vampire spawn stay indoors during the day but fear magical sunlight."
+      },
+      {
+        "title": "Alterations to Magic",
+        "content": "- Barovia is isolated from other planes; spells like teleport and plane shift fail.\n- Magic that allows contact with other planes works normally, but Strahd can make himself the recipient.\n- Magic involving extradimensional space works, but plane-specific restrictions apply."
+      },
+      {
+        "title": "Cosmetic Spell Modifications",
+        "content": "- Certain spells are modified to reflect Barovia's horror:\n  - Alarm: Triggers a scream instead of a ping.\n  - Find familiar: The familiar appears undead.\n  - Mage hand: The conjured hand appears skeletal."
+      },
+      {
+        "title": "Barovians",
+        "subSections": [
+          {
+            "title": "Barovian Attitudes",
+            "content": "- Barovians are wary of strangers and stick to tradition.\n- They are silent and disapproving of anything unfamiliar.\n- Barovians are resilient but have been shaped by fear of Strahd."
+          },
+          {
+            "title": "Children and Adults",
+            "content": "- Barovian children are raised in fear, taught to avoid the woods.\n- Adults live simple lives, hiding their valuables to avoid attention from Strahd."
+          },
+          {
+            "title": "Souls and Shells",
+            "content": "- Only about 1 in 10 Barovians have souls.\n- Soulless Barovians are empty, compliant, and lack charm.\n- Souls reincarnate, sometimes resulting in identical appearances across generations."
+          }
+        ]
+      },
+      {
+        "title": "Barovian Names",
+        "content": "- Male Names: Alek, Boris, Dragomir, Ivan, Stefan, Vladislav.\n- Female Names: Alana, Dorina, Ivana, Katerina, Sorina, Valentina.\n- Family Names: Antonovich, Dargovich, Martikov, Ulrich, Zalenski."
+      }
+    ]
+  },
+  {
+    "title": "Chapter 3: The Village of Barovia",
+    "subSections": [
+      {
+        "title": "Introduction",
+        "content": "- The village of Barovia lies in the shadow of Castle Ravenloft.\n- Residents are terrified of Strahd and rarely leave their homes.\n- Strahd pays nightly visits to Ireena Kolyana, believing her to be Tatyana reincarnated.\n- He plans to turn Ireena into his bride and imprison her in the castle crypts."
+      },
+      {
+        "title": "Approaching the Village",
+        "content": "- Dense fog surrounds everything as characters approach.\n- The village lies eerily silent except for a distant sobbing sound.\n- Sobbing comes from Mad Mary’s townhouse (area E3).\n- Most shops are permanently closed and looted, with claw marks on walls."
+      },
+      {
+        "title": "House Occupants",
+        "subSections": [
+          {
+            "title": "Random Occupants",
+            "content": "- Roll a d20 to determine house occupants:\n  - 1-3: No occupants.\n  - 4-8: 2d4 swarms of rats.\n  - 9-16: Barovian villagers.\n  - 17-20: 2d4 Strahd zombies."
+          },
+          {
+            "title": "Rats",
+            "content": "- Houses infested with rats look abandoned.\n- The rats serve Strahd and attack if the characters enter."
+          },
+          {
+            "title": "Barovian Villagers",
+            "content": "- Houses have 1d4 adults and 1d8-1 children.\n- Villagers are terrified, avoid strangers, and flee danger.\n- At night, they cower with makeshift holy symbols."
+          },
+          {
+            "title": "Strahd Zombies",
+            "content": "- Infested houses reek of death.\n- Zombies attack characters who enter."
+          }
+        ]
+      },
+      {
+        "title": "Areas of the Village",
+        "subSections": [
+          {
+            "title": "E1. Bildrath’s Mercantile",
+            "content": "- A mercantile owned by Bildrath Cantemir, selling adventuring gear at ten times the listed price.\n- Bildrath never bargains, saying, 'If you want it badly enough, you’ll pay for it.'\n- His nephew, Parriwimple, acts as muscle when needed."
+          },
+          {
+            "title": "E2. Blood of the Vine Tavern",
+            "content": "- The tavern is owned by three Vistani women: Alenka, Mirabel, and Sorvia.\n- Ismark Kolyanovich (son of the burgomaster) is often found here.\n- Ismark seeks help to protect his sister, Ireena, from Strahd."
+          },
+          {
+            "title": "E3. Mad Mary’s Townhouse",
+            "content": "- Mary sits in sorrow, clutching a malformed doll.\n- Her daughter, Gertruda, ran away a week ago, and Mary fears the worst."
+          },
+          {
+            "title": "E4. Burgomaster’s Mansion",
+            "content": "- The mansion is worn, with claw marks and blackened walls from attacks.\n- Ireena Kolyana is inside, refusing to leave until her father is buried.\n- The body of Kolyan Indirovich lies in a simple wooden coffin."
+          },
+          {
+            "title": "E5. Church",
+            "content": "- A worn and weary church standing against the roots of the Pillarstone of Ravenloft.\n- The priest, Donavich, prays constantly for his son Doru, a vampire spawn trapped in the undercroft.\n- Characters can assist with the burial of the burgomaster."
+          },
+          {
+            "title": "E6. Cemetery",
+            "content": "- Enclosed by a rusty iron fence.\n- Every night, spirits rise from the graves and march toward Castle Ravenloft."
+          },
+          {
+            "title": "E7. Haunted House",
+            "content": "- The haunted house is detailed in Appendix B, 'Death House.'"
+          }
+        ]
+      },
+      {
+        "title": "Special Events",
+        "subSections": [
+          {
+            "title": "March of the Dead",
+            "content": "- Every night at midnight, one hundred spirits rise from the cemetery and march to Castle Ravenloft.\n- These spirits are former adventurers who failed to defeat Strahd."
+          },
+          {
+            "title": "Dream Pastries",
+            "content": "- Morgantha, a night hag, sells 'dream pastries' to villagers.\n- She collects payment in gold or occasionally takes a child as payment.\n- Characters can intervene to rescue a child if they wish."
+          }
+        ]
+      }
+    ]
+  }
+]
