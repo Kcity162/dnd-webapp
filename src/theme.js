@@ -67,6 +67,9 @@ const theme = createTheme({
     surfContainer: {
       default: '#fceae7',
     },
+    surfContainerTert: {
+      default: '#fce4c6',
+    },
     surfContainerLow: {
       default: '#fff0ee',
     },
@@ -176,6 +179,10 @@ const theme = createTheme({
   },
   typography: {
     // You can further customize fonts, sizes, and more here if needed
+    summary: {
+      fontSize: '2.5rem',
+      fontWeight: 'bold',
+  },
   },
 });
 

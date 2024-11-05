@@ -61,19 +61,19 @@ const StoryPage = () => {
       />
       {storyData[selectedChapter]?.subSections.map((subSection, index) => (
         <Accordion key={index} expanded={!!expanded[`panel${index}`]} onChange={handleChange(`panel${index}`)}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainer.default' }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
-            <Typography>{subSection.title}</Typography>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainer.default',  }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
+            <Typography variant="h6">{subSection.title}</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: 'surface.default' }}>
             {subSection.content && subSection.content.split('\n').map((line, i) => (
               <Typography key={i}>{line}</Typography>
             ))}
             {subSection.subSections && subSection.subSections.map((nestedSection, nestedIndex) => (
               <Accordion key={`${index}-${nestedIndex}`} expanded={!!expanded[`panel${index}-${nestedIndex}`]} onChange={handleChange(`panel${index}-${nestedIndex}`)}>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainerLow.default' }} aria-controls={`panel${index}-${nestedIndex}a-content`} id={`panel${index}-${nestedIndex}a-header`}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainerTert.default', color: "black" }} aria-controls={`panel${index}-${nestedIndex}a-content`} id={`panel${index}-${nestedIndex}a-header`}>
                   <Typography>{nestedSection.title}</Typography>
                 </AccordionSummary>
-                <AccordionDetails>
+                <AccordionDetails sx={{ backgroundColor: 'surfContainerLowest.default' }}>
                   {nestedSection.content && nestedSection.content.split('\n').map((line, i) => (
                     <Typography key={i}>{line}</Typography>
                   ))}
