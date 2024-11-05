@@ -37,10 +37,10 @@ const PlayersPage = () => {
     <div style={pageStyle}>
       {playersData.map((player, index) => (
         <Accordion key={index} expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
-            <Typography color='primary'>{player.name}</Typography>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainer.default',  }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
+            <Typography  variant="h6">{player.name}</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: 'surface.default' }}>
             <Typography>{player.details}</Typography>
           </AccordionDetails>
         </Accordion>

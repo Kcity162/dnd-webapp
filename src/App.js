@@ -7,6 +7,7 @@ import StoryPage from './pages/StoryPage';
 import RulesPage from './pages/RulesPage';
 import RollTablesPage from './pages/RollTablesPage';
 import PlayersPage from './pages/PlayersPage';
+import NpcPage from './pages/NpcPage';
 
 
 function App() {
@@ -61,16 +62,22 @@ function App() {
       case 1:
         return (
           <div>
-            <RulesPage />
+            <NpcPage />
           </div>
         );
       case 2:
         return (
           <div>
-            <RollTablesPage />
+            <RulesPage />
           </div>
         );
       case 3:
+        return (
+          <div>
+            <RollTablesPage />
+          </div>
+        );
+      case 4:
         return (
           <div>
             <PlayersPage />

@@ -1,0 +1,140 @@
+{
+  "NonPlayerCharacters": [
+    {
+      "title": "Villagers of Barovia",
+      "subSections": [
+        {
+          "title": "Ireena Kolyana",
+          "content": "- Role: Adopted daughter of Kolyan Indirovich, sought by Strahd.\n- Personality: Courageous but haunted by her past.",
+          "traits": [
+            "Strong-willed and protective of her family.",
+            "Haunted by gaps in her memory from Strahd's influence."
+          ],
+          "motivation": "Wants to escape Strahd and protect her loved ones.",
+          "connection": "Carries the soul of Tatyana, Strahd's lost love.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Ismark Kolyanovich (Ismark the Lesser)",
+          "content": "- Role: Son of the late burgomaster, brother of Ireena.\n- Personality: Brave, loyal, but burdened by his father's legacy.",
+          "traits": [
+            "Seeks to protect his sister at all costs.",
+            "Not as dour as most Barovians; willing to take risks."
+          ],
+          "motivation": "Protect Ireena by getting her away from Barovia Village.",
+          "connection": "Seeks allies to take Ireena to Vallaki or another safer place.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Mad Mary",
+          "content": "- Role: Distraught mother searching for her missing daughter.\n- Personality: Grief-stricken and paranoid.",
+          "traits": [
+            "Rarely leaves her house.",
+            "Spends her days crying over her daughter’s disappearance."
+          ],
+          "motivation": "Wants to find her missing daughter, Gertruda.",
+          "connection": "Blames herself for her daughter's disappearance, unaware that Gertruda went willingly to Castle Ravenloft.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Bildrath Cantemir",
+          "content": "- Role: Shopkeeper of Bildrath's Mercantile.\n- Personality: Greedy and unyielding.",
+          "traits": [
+            "Charges ten times the price for any item.",
+            "Uninterested in the well-being of others unless it profits him."
+          ],
+          "motivation": "Purely monetary gain.",
+          "connection": "His nephew, Parriwimple, works for him as a shop assistant and enforcer.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Parriwimple",
+          "content": "- Role: Nephew of Bildrath, shop assistant.\n- Personality: Strong but simple-minded.",
+          "traits": [
+            "Physically imposing, with a gentle demeanor.",
+            "Devoted to his uncle, obeys his commands without question."
+          ],
+          "motivation": "Protect Bildrath and help in the shop.",
+          "connection": "Known for his strength but has no ill will towards others.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Arik Lorensk",
+          "content": "- Role: Barkeep at the Blood of the Vine Tavern.\n- Personality: Apathetic and robotic.",
+          "traits": [
+            "Speaks in a monotone and shows little emotion.",
+            "Repeats tasks without thinking, such as cleaning glasses endlessly."
+          ],
+          "motivation": "None; seems lost and disconnected.",
+          "connection": "Works for the Vistani owners of the tavern.",
+          "image": "placeholder_url"
+        }
+      ]
+    },
+    {
+      "title": "Vistani NPCs",
+      "subSections": [
+        {
+          "title": "Alenka, Mirabel, and Sorvia",
+          "content": "- Role: Vistani owners of the Blood of the Vine Tavern.\n- Personality: Wary and opportunistic.",
+          "traits": [
+            "Show little interest in strangers unless they see an opportunity.",
+            "Willing to offer information about Madam Eva if approached by other Vistani."
+          ],
+          "motivation": "Maintain their livelihood and stay in Strahd's good graces.",
+          "connection": "Have ties to Madam Eva and know much about Barovia.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Madam Eva",
+          "content": "- Role: Vistani seer, leader, and ally against Strahd.\n- Personality: Cryptic and all-knowing.",
+          "traits": [
+            "Can see into the past and future of the adventurers.",
+            "Appears calm and collected, with hidden depths of knowledge."
+          ],
+          "motivation": "Wants to free Barovia from Strahd's grasp.",
+          "connection": "Connected to Strahd's past, and holds the secrets to the adventurers’ future.",
+          "image": "placeholder_url"
+        }
+      ]
+    },
+    {
+      "title": "Other Key NPCs",
+      "subSections": [
+        {
+          "title": "Donavich",
+          "content": "- Role: Priest of the Barovian church.\n- Personality: Devout but slowly succumbing to despair.",
+          "traits": [
+            "Desperate to save his son, who has become a vampire spawn.",
+            "Prays constantly, hoping for divine intervention."
+          ],
+          "motivation": "Seeks a miracle to save his son, Doru.",
+          "connection": "Knows details about Ireena’s origins and the spirits rising from the cemetery.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Doru",
+          "content": "- Role: Donavich's son, turned into a vampire spawn.\n- Personality: Starving, desperate, and aggressive.",
+          "traits": [
+            "Begs for blood, willing to attack to get it.",
+            "Remembers the failed rebellion against Strahd."
+          ],
+          "motivation": "Satisfy his hunger for blood.",
+          "connection": "Was part of a failed attack on Castle Ravenloft, led by a mysterious wizard.",
+          "image": "placeholder_url"
+        },
+        {
+          "title": "Morgantha",
+          "content": "- Role: Night hag in disguise, seller of dream pastries.\n- Personality: Deceptive and sinister.",
+          "traits": [
+            "Appears as an old woman selling pastries that bring blissful dreams.",
+            "Willing to trade children in exchange for her dream pastries."
+          ],
+          "motivation": "Prey on the despair of Barovians and gather souls.",
+          "connection": "Operates from Old Bonegrinder and has her own dark plans beyond Strahd's influence.",
+          "image": "placeholder_url"
+        }
+      ]
+    }
+  ]
+}

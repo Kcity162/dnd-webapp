@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import BookIcon from '@mui/icons-material/Book';
+import Face from '@mui/icons-material/Face';
 import CasinoIcon from '@mui/icons-material/Casino';
 import GroupIcon from '@mui/icons-material/Group';
 import RulesIcon from '@mui/icons-material/MenuBook';
@@ -26,6 +27,7 @@ const BottomNavigationBar = ({ onChange }) => {
         showLabels
       >
         <BottomNavigationAction label="Story" icon={<BookIcon />} />
+        <BottomNavigationAction label="NPC's" icon={<Face />} />
         <BottomNavigationAction label="Rules" icon={<RulesIcon />} />
         <BottomNavigationAction label="Roll Tables" icon={<CasinoIcon />} />
         <BottomNavigationAction label="Players" icon={<GroupIcon />} />
