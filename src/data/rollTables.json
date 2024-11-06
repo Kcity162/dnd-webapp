@@ -1,10 +1,10 @@
-  [
-    {
-      "title": "Treasure Tables",
-      "content": "Detailed information about treasure tables goes here."
-    },
-    {
-      "title": "Encounter Tables",
-      "content": "Detailed information about encounter tables goes here."
-    }
-  ]
+[
+  {
+    "title": "Treasure Tables",
+    "content": "Detailed information about treasure tables goes here."
+  },
+  {
+    "title": "Encounter Tables",
+    "content": "Detailed information about encounter tables goes here."
+  }
+]

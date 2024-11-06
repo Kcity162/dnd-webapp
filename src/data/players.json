@@ -1,11 +1,10 @@
-  [
-    {
-      "name": "Bob",
-      "details": "Detailed information about Player 1 goes here."
-    },
-    {
-      "name": "Player 2",
-      "details": "Detailed information about Player 2 goes here."
-    }
-  ]
-  
+[
+  {
+    "name": "Bob",
+    "details": "Detailed information about Player 1 goes here."
+  },
+  {
+    "name": "Player 2",
+    "details": "Detailed information about Player 2 goes here."
+  }
+]
