@@ -14,13 +14,14 @@ import PageWrapper from '../components/PageWrapper';
 const StoryPage = () => {
 
 
-  const [expanded, setExpandedStory] = useState({});
+  const [expanded, setExpandedStory] = useState('');
   const [selectedChapter, setSelectedChapter] = useState(0);
+  const [expandedPanels, setExpandedPanels] = useState({});
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpandedStory((prevExpanded) => ({
+    setExpandedPanels((prevExpanded) => ({
       ...prevExpanded,
-      [panel]: isExpanded
+      [panel]: isExpanded, // Set the state to track whether the panel is expanded or not
     }));
   };
 
@@ -42,17 +43,25 @@ const StoryPage = () => {
           sx={{ width: '100%', marginBottom: '16px', backgroundColor: 'white' }}
         />
         {storyData[selectedChapter]?.subSections.map((subSection, index) => (
-          <Accordion key={index} expanded={!!expanded[`panel${index}`]} onChange={handleChange(`panel${index}`)}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainer.default' }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
+           <Accordion
+           key={index}
+           expanded={!!expandedPanels[`panel${index}`]} // Check if the current panel is expanded
+           onChange={handleChange(`panel${index}`)} // Handle the expand/collapse state
+            >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surface.default' }} aria-controls={`panel${index}a-content`} id={`panel${index}a-header`}>
               <Typography variant="h6">{subSection.title}</Typography>
             </AccordionSummary>
-            <AccordionDetails sx={{ backgroundColor: 'surface.default' }}>
+            <AccordionDetails sx={{ backgroundColor: 'surfContainerLowest.default' }}>
               {subSection.content && subSection.content.split('\n').map((line, i) => (
                 <Typography key={i}>{line}</Typography>
               ))}
               {subSection.subSections && subSection.subSections.map((nestedSection, nestedIndex) => (
-                <Accordion key={`${index}-${nestedIndex}`} expanded={!!expanded[`panel${index}-${nestedIndex}`]} onChange={handleChange(`panel${index}-${nestedIndex}`)}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainerTert.default', color: "black" }} aria-controls={`panel${index}-${nestedIndex}a-content`} id={`panel${index}-${nestedIndex}a-header`}>
+                <Accordion
+                key={`${index}-${nestedIndex}`}
+                expanded={!!expandedPanels[`panel${index}-${nestedIndex}`]} // Check if the current nested panel is expanded
+                onChange={handleChange(`panel${index}-${nestedIndex}`)} // Handle the expand/collapse state for the nested accordion
+              >
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ backgroundColor: 'surfContainerHighest.default', color: "black" }} aria-controls={`panel${index}-${nestedIndex}a-content`} id={`panel${index}-${nestedIndex}a-header`}>
                     <Typography>{nestedSection.title}</Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{ backgroundColor: 'surfContainerLowest.default' }}>
