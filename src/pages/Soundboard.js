@@ -55,23 +55,26 @@ const Soundboard = () => {
     });
   };
 
-  const filteredSounds = sounds
-    .filter(
+  const filteredSounds = [
+    // Pinned items
+    ...sounds.filter(
       (sound) =>
-        (typeof sound.Name === "string" &&
+        favorites.has(sound.ID) &&
+        ((typeof sound.Name === "string" &&
           sound.Name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (typeof sound.Soundset === "string" &&
-          sound.Soundset.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        favorites.has(sound.ID)
-    )
-    .sort((a, b) => {
-      const aIsFavorite = favorites.has(a.ID);
-      const bIsFavorite = favorites.has(b.ID);
-
-      if (aIsFavorite && !bIsFavorite) return -1; // `a` is a favorite, move it up
-      if (!aIsFavorite && bIsFavorite) return 1;  // `b` is a favorite, move it up
-      return 0; // No change
-    });
+          (typeof sound.Soundset === "string" &&
+            sound.Soundset.toLowerCase().includes(searchTerm.toLowerCase())))
+    ),
+    // Non-pinned items
+    ...sounds.filter(
+      (sound) =>
+        !favorites.has(sound.ID) &&
+        ((typeof sound.Name === "string" &&
+          sound.Name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+          (typeof sound.Soundset === "string" &&
+            sound.Soundset.toLowerCase().includes(searchTerm.toLowerCase())))
+    ),
+  ];
 
   const playSound = (trigger) => {
     const baseUrl =
@@ -112,9 +115,12 @@ const Soundboard = () => {
 
   const Row = ({ index, style }) => {
     const sound = filteredSounds[index];
+    const defaultImageUrl = "https://storage.syrinscape.com/media/dd/element/icon/6bfeca4420d2050a66f22074843a6975.png";
+
     return (
       <div style={style}>
         <Card sx={{ position: "relative", margin: "8px" }}>
+          {/* Pin Icon */}
           <Box
             sx={{
               position: "absolute",
@@ -134,6 +140,7 @@ const Soundboard = () => {
               )}
             </IconButton>
           </Box>
+          {/* Type Icon */}
           <Box
             sx={{
               position: "absolute",
@@ -143,7 +150,23 @@ const Soundboard = () => {
           >
             {getIcon(sound.Type)}
           </Box>
-          <CardContent>
+          <CardContent sx={{ display: "flex", alignItems: "center" }}>
+            {/* Image */}
+            <img
+              src={sound.ImageUrl ? sound.ImageUrl : defaultImageUrl}
+              alt={`${sound.Name || "Default"} thumbnail`}
+              style={{
+                width: 80, // Updated width
+                height: 80, // Updated height
+                marginRight: 8,
+                borderRadius: "4px",
+              }}
+              onError={(e) => {
+                e.target.onerror = null; // Prevent infinite fallback loop
+                e.target.src = defaultImageUrl; // Set fallback image
+              }}
+            />
+            {/* Soundset Name */}
             <Chip
               label={sound.Soundset}
               sx={{
@@ -169,23 +192,33 @@ const Soundboard = () => {
 
   return (
     <div>
-      <TextField
-        label="Search"
-        variant="outlined"
-        fullWidth
-        margin="normal"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        InputProps={{
-          endAdornment: searchTerm && (
-            <InputAdornment position="end">
-              <IconButton onClick={() => setSearchTerm("")}>
-                <ClearIcon />
-              </IconButton>
-            </InputAdornment>
-          ),
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 1000,
+          backgroundColor: "#fff",
+          padding: "8px 0",
         }}
-      />
+      >
+        <TextField
+          label="Search"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          InputProps={{
+            endAdornment: searchTerm && (
+              <InputAdornment position="end">
+                <IconButton onClick={() => setSearchTerm("")}>
+                  <ClearIcon />
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
+      </div>
       <List
         height={600}
         itemCount={filteredSounds.length}

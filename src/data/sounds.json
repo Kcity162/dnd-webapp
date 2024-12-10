@@ -79518,5 +79518,22 @@
       "Name": "",
       "Type": "",
       "Trigger": "elements/425033"
-    }
+    },
+    {
+        "ID": "k-1",
+        "Soundset": "CoS: Lands of Barovia",
+        "Name": "Old Svalich road by foot",
+        "Type": "mood",
+        "Trigger": "moods/101097"
+      },
+      {
+        "ID": "m:85569",
+        "Soundset": "Haunted castle",
+        "Name": "Castle approach",
+        "Type": "mood",
+        "Trigger": "moods/85569",
+        "ImageUrl": "https://storage.syrinscape.com/media/dd/element/icon/d21fe9f9a1fa0826a86aef85248a64b1.png"
+      }
+      
+
   ]
