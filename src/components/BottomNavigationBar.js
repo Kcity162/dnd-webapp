@@ -8,6 +8,7 @@ import CasinoIcon from '@mui/icons-material/Casino';
 import GroupIcon from '@mui/icons-material/Group';
 import RulesIcon from '@mui/icons-material/MenuBook';
 import Paper from '@mui/material/Paper';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
 const BottomNavigationBar = ({ onChange }) => {
   const [value, setValue] = useState(0);
@@ -27,6 +28,7 @@ const BottomNavigationBar = ({ onChange }) => {
         showLabels
       >
         <BottomNavigationAction label="Story" icon={<BookIcon />} />
+        <BottomNavigationAction label="Sounds" icon={<MusicNoteIcon />} />
         <BottomNavigationAction label="NPC's" icon={<Face />} />
         <BottomNavigationAction label="Rules" icon={<RulesIcon />} />
         <BottomNavigationAction label="Roll Tables" icon={<CasinoIcon />} />
