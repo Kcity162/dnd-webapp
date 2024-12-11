@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left on the main axis */
+  align-items: flex-start;    /* Align items to the top on the cross axis */
+  text-align: left;
+  gap: 10px;                  /* Optional: Add space between items */
+}
+
+.notes {
+  padding-top: 1rem;
+  padding-left: 1rem;
+}

@@ -10,6 +10,7 @@ import storyData from "../data/story.json";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import PageWrapper from "../components/PageWrapper";
+import { Card } from "@mui/material";
 
 const StoryPage = () => {
   const [expanded, setExpandedStory] = useState("");
@@ -61,24 +62,26 @@ const StoryPage = () => {
           <AccordionDetails
             sx={{
               backgroundColor: "surfContainerLowest.default",
-              display: "flex",
-              alignItems: "flex-start",
+
             }}
           >
-            {/* Rendering an image if there is an image link in the subsection */}
-            {subSection.image && (
+
+           <div class="container">
+           {subSection.image && (
               <img
                 src={subSection.image}
                 alt={subSection.title}
                 style={{ maxWidth: "150%", marginTop: "16px" }}
               />
-            )}
-            {/* Rendering the content of the sub-section, splitting it into lines */}
-            <div>
-              {subSection.content &&
-                subSection.content
-                  .split("\n")
-                  .map((line, i) => <Typography key={i}>{line}</Typography>)}
+            )} 
+            
+            <div class="notes">
+            {subSection.content &&
+              subSection.content
+                .split("\n")
+                .map((line, i) => <Typography key={i}>{line}</Typography>)}
+              
+              </div>
             </div>
             {subSection.subSections &&
               subSection.subSections.map((nestedSection, nestedIndex) => (
@@ -101,13 +104,8 @@ const StoryPage = () => {
                   <AccordionDetails
                     sx={{ backgroundColor: "surfContainerLowest.default" }}
                   >
-                    {nestedSection.content &&
-                      nestedSection.content
-                        .split("\n")
-                        .map((line, i) => (
-                          <Typography key={i}>{line}</Typography>
-                        ))}
-                    {/* Rendering an image if there is an image link in the nested section */}
+
+                    <div class="container">
                     {nestedSection.image && (
                       <img
                         src={nestedSection.image}
@@ -115,14 +113,17 @@ const StoryPage = () => {
                         style={{ maxWidth: "150px", marginRight: "16px" }}
                       />
                     )}
-                    <div>
-                      {nestedSection.content &&
-                        nestedSection.content
-                          .split("\n")
-                          .map((line, i) => (
-                            <Typography key={i}>{line}</Typography>
-                          ))}
+                    <div class="notes">
+                    {nestedSection.content &&
+                      nestedSection.content
+                        .split("\n")
+                        .map((line, i) => (
+                          <Typography key={i}>{line}</Typography>
+                        ))}
                     </div>
+
+                    </div>
+
                   </AccordionDetails>
                 </Accordion>
               ))}
