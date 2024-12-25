@@ -97,8 +97,8 @@ function App() {
 
   return (
     <div className="App">
-      <TopNavigationBar></TopNavigationBar>
-      <main style={{ paddingBottom: '80px', paddingTop:'60px' }}>
+      {/* <TopNavigationBar></TopNavigationBar> */} 
+      <main>
         {renderContent()}
       </main>
       <BottomNavigationBar onChange={setSelectedPage} />
