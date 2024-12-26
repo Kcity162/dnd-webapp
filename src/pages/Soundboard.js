@@ -127,8 +127,10 @@ const Soundboard = () => {
               top: 8,
               left: 8,
               zIndex: 10,
+              display: "flex",
+              flexDirection: 'row'
             }}
-          >
+          > 
             <IconButton
               onClick={() => toggleFavorite(sound.ID)}
               color={favorites.has(sound.ID) ? "primary" : "default"}
@@ -139,8 +141,8 @@ const Soundboard = () => {
                 <PushPinOutlinedIcon />
               )}
             </IconButton>
-          </Box>
-          {/* Type Icon */}
+          </Box> 
+          {/* Type Icon 
           <Box
             sx={{
               position: "absolute",
@@ -149,24 +151,10 @@ const Soundboard = () => {
             }}
           >
             {getIcon(sound.Type)}
-          </Box>
+          </Box> */}
           <CardContent sx={{ display: "flex", alignItems: "center" }}>
-            {/* Image */}
-            <img
-              src={sound.ImageUrl ? sound.ImageUrl : defaultImageUrl}
-              alt={`${sound.Name || "Default"} thumbnail`}
-              style={{
-                width: 80, // Updated width
-                height: 80, // Updated height
-                marginRight: 8,
-                borderRadius: "4px",
-              }}
-              onError={(e) => {
-                e.target.onerror = null; // Prevent infinite fallback loop
-                e.target.src = defaultImageUrl; // Set fallback image
-              }}
-            />
-            {/* Soundset Name */}
+           
+            {/* Soundset Name 
             <Chip
               label={sound.Soundset}
               sx={{
@@ -175,6 +163,7 @@ const Soundboard = () => {
                 fontWeight: "bold",
               }}
             />
+          */}
           </CardContent>
           <CardActions>
             <Button
@@ -220,9 +209,9 @@ const Soundboard = () => {
         />
       </div>
       <List
-        height={600}
+        height={850}
         itemCount={filteredSounds.length}
-        itemSize={180}
+        itemSize={80}
         width="100%"
       >
         {Row}
