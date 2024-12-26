@@ -12,9 +12,12 @@ import SearchDrawer from '../components/SearchDrawer';
 export default function SoundTable() {
   return (
       <>
-      <SearchDrawer />
-      <Grid container spacing={1} justifyContent="flex-start" alignItems="center">
-        <Grid item xs={12} style={{paddingBottom: "5px"}}>
+      
+      <Grid container spacing={1} justifyContent="flex-start" alignItems="center" paddingLeft={"16px"}>
+        <Grid>
+          <SearchDrawer item xs={2} />
+        </Grid>
+        <Grid item xs={10} style={{paddingBottom: "5px"}}>
         <IconPositionTabs/>
           </Grid>
       </Grid>

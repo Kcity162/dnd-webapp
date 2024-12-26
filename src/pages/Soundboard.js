@@ -18,6 +18,9 @@ import ClearIcon from "@mui/icons-material/Clear";
 import StopIcon from "@mui/icons-material/Stop";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import sounds from "../data/sounds.json";
 
@@ -119,7 +122,7 @@ const Soundboard = () => {
 
     return (
       <div style={style}>
-        <Card sx={{ position: "relative", margin: "8px" }}>
+        <Card sx={{ position: "relative" }}>
           {/* Pin Icon */}
           <Box
             sx={{
@@ -136,9 +139,19 @@ const Soundboard = () => {
               color={favorites.has(sound.ID) ? "primary" : "default"}
             >
               {favorites.has(sound.ID) ? (
-                <PushPinIcon />
+                <FavoriteIcon />
               ) : (
-                <PushPinOutlinedIcon />
+                <FavoriteBorderIcon />
+              )}
+            </IconButton>
+            <IconButton
+              onClick={() => toggleFavorite(sound.ID)}
+              color={favorites.has(sound.ID) ? "primary" : "default"}
+            >
+              {favorites.has(sound.ID) ? (
+                <ContentCopyIcon />
+              ) : (
+                <ContentCopyIcon />
               )}
             </IconButton>
           </Box> 
