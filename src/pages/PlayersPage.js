@@ -7,11 +7,12 @@ import SoundCard from '../components/SoundCard';
 import { ToggleButtonGroup } from '@mui/material';
 import ColorToggleButton from '../components/IconPositionTabs';
 import IconPositionTabs from '../components/IconPositionTabs';
+import SearchDrawer from '../components/SearchDrawer';
 
 export default function SoundTable() {
   return (
       <>
-      
+      <SearchDrawer />
       <Grid container spacing={1} justifyContent="flex-start" alignItems="center">
         <Grid item xs={12} style={{paddingBottom: "5px"}}>
         <IconPositionTabs/>
