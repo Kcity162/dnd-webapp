@@ -1,0 +1,10 @@
+[
+    {
+      "ID": "m:85569",
+      "Soundset": "Soundset 1",
+      "Name": "Sound Name 1",
+      "Type": "mood",
+      "Trigger": "moods/85569"
+    }
+
+  ]
