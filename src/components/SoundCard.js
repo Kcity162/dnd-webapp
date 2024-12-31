@@ -36,16 +36,16 @@ export default function Soundcard() {
           ))}
           </Typography>
         </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 1 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 12 }}>
           <IconButton aria-label="favorite">
-            <FavoriteIcon sx={{ height: 16, width: 16 }} />
+            <FavoriteIcon sx={{ height: 20, width: 20 }} />
           </IconButton>
           <IconButton aria-label="copy">
-            <ContentCopyIcon sx={{ height: 16, width: 16 }} />
+            <ContentCopyIcon sx={{ height: 20, width: 20 }} />
           </IconButton>
-          <IconButton aria-label="play/pause">
+          {/* <IconButton aria-label="play/pause">
             <PlayCircleIcon sx={{ height: 40, width: 40 }} />
-          </IconButton>
+          </IconButton> */}
         </Box>
       </Box>
     </Card>
