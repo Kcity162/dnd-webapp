@@ -16,7 +16,7 @@ export default function Soundcard() {
 
   return (
     <ButtonBase
-      onClick={() => console.log('Card clicked!')}
+      onClick={() => {console.log('Card clicked!'); alert('You clicked the card!'); }}
       sx={{
         display: 'block',
         textAlign: 'inherit',
