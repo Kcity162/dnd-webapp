@@ -17,9 +17,9 @@ export default function Soundcard() {
     <Card sx={{ display: 'flex', flexDirection: 'column', maxWidth: "325px", backgroundColor: '#F3E5F5' }}>
       <Box sx={{ display: 'flex', flexDirection: 'row' }}>
         <CardContent sx={{ flex: '1 1 auto' }}>
-          <Typography component="div" variant="h6" sx={{ color: 'text.secondary', textAlign: 'left' }}>
+          <Typography component="div" variant="h6" sx={{ color: 'text.secondary', textAlign: 'left', marginBottom: '8px'}}>
           {favSounds.map((sound, index) => (
-            <h4 key={index}>
+            <h4 key={index}  style={{ margin: 0 }}>
               {sound.Name}
             </h4>
           ))}
@@ -30,13 +30,13 @@ export default function Soundcard() {
             sx={{ color: 'text.secondary', textAlign: 'left' }}
           >
           {favSounds.map((sound, index) => (
-            <p key={index}>
+            <p key={index} style={{ margin: 0 }}>
               {sound.Soundset}
             </p>
           ))}
           </Typography>
         </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 12 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 13 }}>
           <IconButton aria-label="favorite">
             <FavoriteIcon sx={{ height: 20, width: 20 }} />
           </IconButton>
