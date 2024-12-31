@@ -9,45 +9,59 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import favSounds from "../data/favSounds.json";
+import ButtonBase from '@mui/material/ButtonBase';
 
 export default function Soundcard() {
   const theme = useTheme();
 
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'column', maxWidth: "325px", backgroundColor: '#F3E5F5' }}>
-      <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-        <CardContent sx={{ flex: '1 1 auto' }}>
-          <Typography component="div" variant="h6" sx={{ color: 'text.secondary', textAlign: 'left', marginBottom: '8px'}}>
-          {favSounds.map((sound, index) => (
-            <h4 key={index}  style={{ margin: 0 }}>
-              {sound.Name}
-            </h4>
-          ))}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            component="div"
-            sx={{ color: 'text.secondary', textAlign: 'left' }}
-          >
-          {favSounds.map((sound, index) => (
-            <p key={index} style={{ margin: 0 }}>
-              {sound.Soundset}
-            </p>
-          ))}
-          </Typography>
-        </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 13 }}>
-          <IconButton aria-label="favorite">
-            <FavoriteIcon sx={{ height: 20, width: 20 }} />
-          </IconButton>
-          <IconButton aria-label="copy">
-            <ContentCopyIcon sx={{ height: 20, width: 20 }} />
-          </IconButton>
-          {/* <IconButton aria-label="play/pause">
-            <PlayCircleIcon sx={{ height: 40, width: 40 }} />
-          </IconButton> */}
+    <ButtonBase
+      onClick={() => console.log('Card clicked!')}
+      sx={{
+        display: 'block',
+        textAlign: 'inherit',
+        width: '100%', // Ensures the ButtonBase spans the entire card
+      }}
+    >
+      <Card sx={{ display: 'flex', flexDirection: 'column', maxWidth: "325px", backgroundColor: '#F3E5F5' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+          <CardContent sx={{ flex: '1 1 auto' }}>
+            <Typography
+              component="div"
+              variant="h6"
+              sx={{ color: 'text.secondary', textAlign: 'left', marginBottom: '8px' }}
+            >
+              {favSounds.map((sound, index) => (
+                <h4 key={index} style={{ margin: 0 }}>
+                  {sound.Name}
+                </h4>
+              ))}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              component="div"
+              sx={{ color: 'text.secondary', textAlign: 'left' }}
+            >
+              {favSounds.map((sound, index) => (
+                <p key={index} style={{ margin: 0 }}>
+                  {sound.Soundset}
+                </p>
+              ))}
+            </Typography>
+          </CardContent>
+          <Box sx={{ display: 'flex', alignItems: 'center', pl: 0, pb: 13 }}>
+            <IconButton aria-label="favorite">
+              <FavoriteIcon sx={{ height: 20, width: 20 }} />
+            </IconButton>
+            <IconButton aria-label="copy">
+              <ContentCopyIcon sx={{ height: 20, width: 20 }} />
+            </IconButton>
+            {/* <IconButton aria-label="play/pause">
+              <PlayCircleIcon sx={{ height: 40, width: 40 }} />
+            </IconButton> */}
+          </Box>
         </Box>
-      </Box>
-    </Card>
+      </Card>
+    </ButtonBase>
   );
 }
