@@ -8,6 +8,7 @@ import { ToggleButtonGroup } from '@mui/material';
 import ColorToggleButton from '../components/IconPositionTabs';
 import IconPositionTabs from '../components/IconPositionTabs';
 import SearchDrawer from '../components/SearchDrawer';
+import SpotifyCard from '../components/SpotifyCard';
 
 export default function SoundTable() {
   return (
@@ -24,6 +25,9 @@ export default function SoundTable() {
       <Grid container spacing={1} justifyContent="flex-start" alignItems="center">
         <Grid item xs={2}>
           <SoundCard title="Sound 1" description="Description for sound 1" />
+        </Grid>
+        <Grid item xs={2}>
+          <SpotifyCard/>
         </Grid>
         <Grid item xs={2}>
           <SoundCard title="Sound 2" description="Description for sound 2" />
